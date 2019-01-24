@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Ejercicio sobre shapes">
+    <meta name="author" content="Bere Sing">
+    <title>Ejercicio 5</title>
+
+    <style media="screen">
+    .container{
+      margin: 0 auto;
+      width: 80%;
+    }
+
+      #perro1 {
+        width: 300px;
+        float: left;
+        shape-outside: circle(50.00% at center center);
+      }
+
+      #perro2 {
+        width: 300px;
+        float: right;
+        shape-outside: polygon(82px 68px, 11.83% 17.81%, 1.82% 25.86%, 12.19% 47.29%, 14.86% 62.94%, 24.06% 76.35%, 19.59% 96.99%, 265px 273px, 91.32% 3.73%, 77.33% 19.87%, 146px 51px);
+        /* para sacar los datos correctos se abre el ejercicio en Fireox Developer edition, donde con el clic derecho *inspeccionar elemento* dandole clic a la imagen (en el simbolito raro con circulos) se da clic y logramos modificar el poligono/circulo/etc al modo que se quiere */
+      }
+
+      #perro3 {
+        width: 300px;
+        float: left;
+        clip-path: ellipse(117px 92px at 154px 149px);
+         /* se hace un recorte a la imagen */
+         shape-outside: ellipse(132px 103px at 154px 149px);
+      }
+
+      #perro4 {
+        width: 300px;
+        float: left;
+        shape-outside: url(images/anim51.png);
+        /* se pone al contorno del png pero hay una imagen atras*/
+      }
+
+      #perro5 {
+        width: 300px;
+        float: left;
+        clip-path: url(#myClip)
+        /* en la selección se coloco el svg (vector) y colocando el clip-path con el url que es el svg se coloca el contorno*/
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <section>
+
+        <h1>Shapes outside: circule</h1>
+            <img id="perro1" src="images/anim5.png" alt="perro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <section>
+        <h1>Shape outside: polygon</h1>
+            <img id="perro2" src="images/anim51.png" alt="perro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <section>
+        <h1>Clip-path: Ellipse</h1>
+            <img id="perro3" src="images/anim5.png" alt="perro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+      </section>
+
+      <section>
+        <h1>Shape-outside png </h1>
+            <img id="perro4" src="images/anim5.png" alt="perro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+      </section>
+
+      <section>
+        <h1>Clip path, svg </h1>
+            <img id="perro5" src="images/anim5.jpg" alt="perro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+        <svg width="0" height="0">
+          <defs>
+            <ClipPath id="myClip">
+              <!-- se coloca el path del svg (ector) para que la imagen se coloque dentro-->
+              <path class="st0" d="M128.7,259.7c0,0,57.9-70,84.5-100.7S293.7,59.3,236,15.7S132.1,30.5,128.7,57.4c0,0-21.4-61.3-73.6-53.1
+            		C22.9,9.3-0.6,37.2,0,69.2c0.5,24,11.7,56,50.2,93.7C50.2,162.8,123,235.7,128.7,259.7z"/>
+          </ClipPath>
+          <defs>
+        </svg>
+      </section>
+
+    </div>
+  </body>
+</html>
