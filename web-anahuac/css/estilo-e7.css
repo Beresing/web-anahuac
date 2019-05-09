@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@@import url('https://fonts.googleapis.com/css?family=Osvald');
+
+html, body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+  .container {
+    Display: grid;
+
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    grid-template-areas:
+    ". . ."
+    ". head ."
+    ". . ."
+  }
+
+  header {
+    background-image: url(../images/ilustracion-improvisada.jpg);
+      font-size: 3rem;
+      padding: 50px;
+      font-family: 'Osxald', sans-serif;
+      grid-area: head;
+  }
+
+  .text { z-index: 5;}
+
+  .img{ grid-area: 2 / 2 / 4 / 4 ;}
+
+  img { display: block; width: 100;}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .img {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  .text {
+  grid-area: 2 / 1 / 3 / 3;
+  }
+
+  body { background-color: rgb(109, 109, 109);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+  //CSS
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .img {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  .text {
+  grid-area: 2 / 1 / 3 / 3;
+  }
+
+  body { background-color: rgb(109, 109, 109);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  //CSS
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .img {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  .text {
+  grid-area: 2 / 1 / 3 / 3;
+  }
+
+  body { background-color: rgb(109, 109, 109);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  //CSS
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .img {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  .text {
+  grid-area: 2 / 1 / 3 / 3;
+  }
+
+  body { background-color: rgb(109, 109, 109);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  //CSS
+
+}
